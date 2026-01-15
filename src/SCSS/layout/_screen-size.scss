@@ -1,0 +1,22 @@
+//Screen sizes (width):
+//mobile 375
+//tablet 768
+//desktop 1440
+
+:root {
+  --screen-size-mobile: 375;
+  --screen-size-tablet: 768;
+  --screen-size-desktop: 1440;
+}
+
+$breakpoints-up: (
+        "mobile": calc(375 / 16 * 1rem),
+        "tablet": calc(768 / 16 * 1rem),
+        "desktop": calc(1440 / 16 * 1rem)
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}

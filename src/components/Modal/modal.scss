@@ -1,0 +1,59 @@
+@use '../../SCSS/layout/screen-size' as *;
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+
+  @include breakpoint(tablet) {
+    gap: 32px;
+    justify-content: center;
+    padding: 60px 64px;
+    width: 504px;
+    height: 520px;
+    border-radius: 36px;
+    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-block-start: 149px;
+    padding-inline: 24px;
+
+    @include breakpoint(tablet) {
+      padding-block-start: 0;
+      padding-inline: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 24px;
+    padding-block-end: 70px;
+
+    @include breakpoint(tablet) {
+      padding-inline: 0;
+      padding-block-end: 0;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--c-blue-800);
+      color: var(--c-white);
+      width: 100%;
+      border-radius: 8px;
+      height: 56px;
+      font-size: var(--font-size-modal-button-text);
+      font-weight: var(--fw-bold);
+
+   }
+  }
+}

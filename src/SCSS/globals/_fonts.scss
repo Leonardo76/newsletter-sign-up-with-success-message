@@ -1,0 +1,18 @@
+:root {
+  --font-size-h1: clamp(2.50rem, calc(1.546rem + 4.071vw), 3.50rem);
+
+  --font-size-p: var(--fs-16);
+  --font-size-li: var(--fs-16);
+  --font-size-label: var(--fs-12);
+  --font-size-input: var(--fs-16);
+  --font-size-button: var(--fs-16);
+  --font-size-error-message-text: var(--fs-12);
+
+  --font-weight-h1: var(--fw-bold);
+  --font-weight-p: var(--fw-regular);
+  --font-weight-li: var(--fw-regular);
+  --font-weight-label: var(--fw-bold);
+  --font-weight-input-placeholder: var(--fw-regular);
+  --font-weight-button-text: var(--fw-bold);
+  --font-weight-error-message-text: var(--fw-bold);
+}

@@ -1,0 +1,40 @@
+:root {
+  //base colors
+  --c-white: hsl(0, 0%, 100%);
+  --c-white-85: hsl(0, 0%, 85%);
+  --c-grey: hsl(0, 0%, 58%);
+  --c-blue-800: hsl(234, 29%, 20%);
+  --c-blue-700: hsl(235, 18%, 26%);
+  --c-red: hsl(4, 100%, 67%);
+  --c-red-100: hsl(2, 100%, 95%);
+  --c-gradient: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%) 100%);
+
+  //used colors
+  --color-main-bg: var(--c-blue-700);
+  --color-h1: var(--c-blue-800);
+  --color-p: var(--c-blue-800);
+  --color-li: var(--c-blue-800);
+  --color-label: var(--c-blue-800);
+
+  --color-input-normal-text: var(--c-blue-800);
+  --color-input-normal-bg: var(--c-white);
+  --color-input-normal-border: var(--c-grey);
+  --color-input-normal-placeholder: var(--c-grey);
+  --color-input-normal-focus-border: var(--c-blue-800);
+
+  --color-input-error-text: var(--c-red);
+  --color-input-error-bg: var(--c-red-100);
+  --color-input-error-border: var(--c-red);
+  --color-input-error-placeholder: var(--c-red);
+  --color-input-error-focus-border: var(--c-red);
+
+  --color-error-message-text: var(--c-red);
+
+  --color-button-text: var(--c-white);
+  --color-button-bg: var(--c-blue-800);
+  --color-button-bg-active: var(--c-gradient);
+
+
+  --color-signup-bg: var(--c-white);
+
+}

@@ -1,0 +1,71 @@
+@use '../utils/functions' as *;
+@use '../layout/screen-size' as *;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font), Arial, Helvetica, sans-serif;
+  background-color: var(--color-main-bg);
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-h1);
+  color: var(--color-h1);
+  line-height: 1;
+
+}
+
+p {
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-p);
+  color: var(--color-p);
+}
+
+a {
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+  padding: 0;
+  background: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+img,
+video,
+iframe,
+picture {
+  display: block;
+  //height: auto;
+  //max-inline-size: 100%;
+  //block-size: auto;
+
+}
+
+button {
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-button-text);
+  color: var(--color-button-text);
+  background-color: var(--color-button-bg);
+  border-radius: calcRem(8);
+
+  @include breakpoint(desktop) {
+    &:active {
+      background: var(--color-button-bg-active);
+      box-shadow: 0 16px 32px 0 hsla(4, 100%, 67%, 0.5);
+    }
+  }
+}

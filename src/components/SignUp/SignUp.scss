@@ -1,0 +1,110 @@
+@use "../../SCSS/utils/functions" as *;
+@use "../../SCSS/layout/screen-size" as *;
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: calcRem(40);
+  background-color: var(--color-signup-bg);
+  min-width: 375px;
+  height: 100vh;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: calc(50% - 439px);
+    width: calcRem(608);
+    height: calcRem(878);
+    border-radius: calcRem(36);
+    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+    padding-block-start: calcRem(42.86);
+    padding-inline: calcRem(40);
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: row-reverse;
+    gap: calcRem(64);
+    align-items: center;
+    justify-content: space-between;
+    min-width: calcRem(904);
+    //width: calc((100% - 268px * 2) * 1px);
+    height: calcRem(641);
+    top: calc(50% - 320.5px);
+    padding: calcRem(32);
+  }
+
+
+  &__image svg {
+    height: clamp(17.75rem, calc(13.337rem + 18.83vw), 22.375rem);
+
+    @include breakpoint(desktop) {
+      width: calcRem(400);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: calcRem(40);
+    padding-inline: calcRem(24);
+
+    @include breakpoint(tablet) {
+      gap: calcRem(24);
+      padding-inline: 0;
+    }
+
+    @include breakpoint(desktop) {
+      gap: calcRem(32);
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: calcRem(24);
+
+      @include breakpoint(desktop) {
+        gap: calcRem(32);
+      }
+
+      &-title {
+      }
+
+      &-message {
+      }
+
+      &-options {
+        display: flex;
+        flex-direction: column;
+        gap: calcRem(8);
+        padding-inline: calcRem(24);
+
+        &-option {
+          list-style-image: url("/src/assets/images/icon-list.svg");
+          font-size: var(--font-size-li);
+          font-weight: var(--font-weight-li);
+          color: var(--color-li);
+          padding-left: calcRem(8);
+        }
+      }
+    }
+
+
+    &-subscribe {
+      display: flex;
+      flex-direction: column;
+      gap: calcRem(24);
+
+      @include breakpoint(tablet) {
+        gap: calcRem(16);
+      }
+
+      &-input {
+      }
+
+      &-button {
+        width: 100%;
+        height: calcRem(56);
+      }
+    }
+  }
+}
+

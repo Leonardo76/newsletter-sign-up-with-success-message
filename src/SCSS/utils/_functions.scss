@@ -1,0 +1,25 @@
+@use "sass:math";
+
+@function calcRem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return calc($pixel / 16 * 1rem);
+  } @else {
+    @error "Don\'t use units when using the rem() function; only numeric values.";
+  }
+}
+
+//@function marginBlockStartRem($rem) {
+//  @if math.is-unitless($rem) {
+//    @return calc(50vh - $rem / 2 * 1rem);
+//  } @else {
+//    @error "Don\'t use units when using the marginBlockStartRem() function; only numeric values.";
+//  }
+//}
+//
+//@function marginBlockStartPixel($pixel) {
+//  @if math.is-unitless($pixel) {
+//    @return calc(50vh - $pixel / 32 * 1rem);
+//  } @else {
+//    @error "Don\'t use units when using the marginBlockStartPixel() function; only numeric values.";
+//  }
+//}

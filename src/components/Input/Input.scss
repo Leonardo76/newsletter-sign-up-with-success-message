@@ -1,0 +1,70 @@
+.inputWithValidation {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &--labelcontainer {
+    display: flex;
+    justify-content: space-between;
+
+    &-message {
+      color: var(--color-label);
+      font-size: var(--font-size-label);
+      font-weight: var(--font-weight-label);
+    }
+
+    &-error {
+      color: var(--color-error-message-text);
+      font-size: var(--font-size-error-message-text);
+      font-weight: var(--font-weight-error-message-text);
+    }
+
+  }
+
+  //&--multiline {
+  //}
+
+  &--input {
+    &-normal,
+    &-error {
+      width: 100%;
+      height: 56px;
+      border-radius: 8px;
+      padding: 16px 24px;
+    }
+
+    &-normal {
+      color: var(--color-input-normal-text);
+      background-color: var(--color-input-normal-bg);
+      border: 1px solid var(--color-input-normal-border);
+    }
+
+    &-error {
+      color: var(--color-input-error-text);
+      background-color: var(--color-input-error-bg);
+      border: 1px solid var(--color-input-error-border);
+    }
+  }
+}
+
+//used when there is no error
+.normalPlaceholderFocus{
+  ::placeholder {
+    color: var(--color-input-normal-placeholder);
+  }
+
+  :focus {
+    border: 1px solid var(--color-input-normal-focus-border);
+  }
+}
+
+//used when there is error
+.errorPlaceholderFocus{
+  ::placeholder {
+    color: var(--color-input-error-placeholder);
+  }
+
+  :focus {
+    border: 1px solid var(--color-input-error-focus-border);
+  }
+}
