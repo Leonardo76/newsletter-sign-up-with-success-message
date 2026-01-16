@@ -50,7 +50,6 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
 - Tailwind CSS - for classes and shadcn
 - Shadcn - for popup/modal/dialog
 - React Hook Form - for validation
