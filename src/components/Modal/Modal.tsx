@@ -1,5 +1,3 @@
-// import { Input } from "@/components/ui/input"
-// import { Label } from "@/components/ui/label"
 import './modal.css'
 import image from '../../assets/images/icon-success.svg';
 
@@ -11,8 +9,14 @@ import {
     DialogHeader,
     DialogTitle
 } from "../ui/dialog.tsx";
-// import {Button} from "../ui/button.tsx";
 
+/**
+ * Popup/Modal/Dialog showing the success message
+ * @param isOpen - state storing the information regarding the Modal is open or not
+ * @param setIsOpen - state function for isOpen
+ * @param email - email written by user (to be shown in the message)
+ * @constructor
+ */
 export default function Modal({isOpen, setIsOpen, email}: {
     isOpen: boolean,
     setIsOpen: (open: boolean) => void,
@@ -20,10 +24,6 @@ export default function Modal({isOpen, setIsOpen, email}: {
 }) {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            {/*<DialogTrigger asChild>*/}
-            {/*    <Button variant="outline">Open Modal</Button>*/}
-            {/*</DialogTrigger>*/}
-
             <DialogContent
                 className="[&>button:first-of-type]:hidden modalContainer"
                 onInteractOutside={(e) => e.preventDefault()}>
@@ -34,7 +34,7 @@ export default function Modal({isOpen, setIsOpen, email}: {
                     </DialogDescription>
                 </DialogHeader>
 
-                <div className="modalContainer__content">
+                <section className="modalContainer__content">
                     <img src={image} alt="Checked image"
                          className="modalContainer__content-image"
                          width="64px"
@@ -45,17 +45,13 @@ export default function Modal({isOpen, setIsOpen, email}: {
                         A confirmation email has been sent to <strong>{email}</strong>.
                         Please open it and click the button inside to
                         confirm your subscription.</p>
-                </div>
+                </section>
 
-                {/*no need*/}
                 <DialogFooter className={"modalContainer__footer"}>
-                    {/*<DialogClose >*/}
                         <button onClick={() => setIsOpen(false)}
                             className="modalContainer__footer-button"
                         >Dismiss message
                         </button>
-                    {/*</DialogClose>*/}
-                    {/*<Button variant={"outline"}>Save changes</Button>*/}
                 </DialogFooter>
 
             </DialogContent>

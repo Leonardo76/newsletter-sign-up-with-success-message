@@ -1,11 +1,3 @@
-/*-------------------------------------------------------------------
- // https://www.freecodecamp.org/news/how-to-validate-forms-in-react/
- */
-/*-------------------------------------------------------------------
-|  CREATE INPUT COMPOENT
-*-------------------------------------------------------------------*/
-
-// import cn from 'classnames'
 import {type FieldErrors, type GlobalError, type RegisterOptions, useFormContext} from 'react-hook-form'
 import {AnimatePresence, motion} from 'framer-motion'
 import './Input.css'
@@ -21,6 +13,17 @@ type InputProps = {
     multiline?: boolean
 }
 
+/**
+ * Input component with automatic validation
+ * @param name - name of the input
+ * @param label - label text associated with the input
+ * @param type - type of the input (default text)
+ * @param id - id of the input
+ * @param placeholder - placeholder text for the input
+ * @param validation - validation object (see inputValidations.ts for examples)
+ * @param multiline - if the input is a multiline textarea or not (default false)
+ * @constructor
+ */
 export const Input =
     ({
          name,
@@ -96,8 +99,8 @@ const framer_error = {
     transition: {duration: 0.2},
 }
 
-//GIVEN AN ERRORS OBJECT AND AN INPUT NAME,
-// THIS FUNCTION FILTERS THE ERRORS OBJECT AND RETURN THE ERROR OF THE GIVEN INPUT
+// Given an errors object and an input type name,
+// this function filters the errors object and return the error of the given input
 function findInputError(errors: FieldErrors, name: string): Record<string, GlobalError> & GlobalError {
     return Object.keys(errors)
         .filter(key => key.includes(name))
@@ -106,10 +109,9 @@ function findInputError(errors: FieldErrors, name: string): Record<string, Globa
         }, {});
 }
 
-//CHECKS IF FORM IS VALID OR NOT
+//Checks if the form is valid or not
 function isFormInvalid(err: Record<string, GlobalError> & GlobalError) {
     return Object.keys(err).length > 0;
-
 }
 
 //endregion

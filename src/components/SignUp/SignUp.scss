@@ -6,16 +6,16 @@
   flex-direction: column;
   gap: calcRem(40);
   background-color: var(--color-signup-bg);
-  min-width: 375px;
+  min-width: calcRem(375);
   height: 100vh;
 
   @include breakpoint(tablet) {
     position: absolute;
-    top: calc(50% - 439px);
+    top: calc(50% - 27.4375rem);//50% - 439px
     width: calcRem(608);
     height: calcRem(878);
     border-radius: calcRem(36);
-    box-shadow: 0 15px 60px 0 hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0 calcRem(15) calcRem(60) 0 hsla(0, 0%, 0%, 0.25);
     padding-block-start: calcRem(42.86);
     padding-inline: calcRem(40);
   }
@@ -26,19 +26,14 @@
     align-items: center;
     justify-content: space-between;
     min-width: calcRem(904);
-    //width: calc((100% - 268px * 2) * 1px);
     height: calcRem(641);
-    top: calc(50% - 320.5px);
-    padding: calcRem(32);
+    top: calc(50% - 20.03125rem);//50% - 320.5px
+    padding-block: calcRem(24);
+    padding-inline: calcRem(32);
   }
-
 
   &__image svg {
     height: clamp(17.75rem, calc(13.337rem + 18.83vw), 22.375rem);
-
-    @include breakpoint(desktop) {
-      width: calcRem(400);
-    }
   }
 
   &__content {
@@ -54,6 +49,8 @@
 
     @include breakpoint(desktop) {
       gap: calcRem(32);
+      width: calcRem(376);
+      height: calcRem(450);
     }
 
     &-text {
@@ -63,12 +60,6 @@
 
       @include breakpoint(desktop) {
         gap: calcRem(32);
-      }
-
-      &-title {
-      }
-
-      &-message {
       }
 
       &-options {
@@ -87,7 +78,6 @@
       }
     }
 
-
     &-subscribe {
       display: flex;
       flex-direction: column;
@@ -95,9 +85,6 @@
 
       @include breakpoint(tablet) {
         gap: calcRem(16);
-      }
-
-      &-input {
       }
 
       &-button {

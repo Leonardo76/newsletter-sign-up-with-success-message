@@ -1,1 +1,120 @@
-:root{--screen-size-mobile: 375;--screen-size-tablet: 768;--screen-size-desktop: 1440}:root{--c-white: hsl(0, 0%, 100%);--c-white-85: hsl(0, 0%, 85%);--c-grey: hsl(0, 0%, 58%);--c-blue-800: hsl(234, 29%, 20%);--c-blue-700: hsl(235, 18%, 26%);--c-red: hsl(4, 100%, 67%);--c-red-100: hsl(2, 100%, 95%);--c-gradient: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%) 100%);--color-main-bg: var(--c-blue-700);--color-h1: var(--c-blue-800);--color-p: var(--c-blue-800);--color-li: var(--c-blue-800);--color-label: var(--c-blue-800);--color-input-normal-text: var(--c-blue-800);--color-input-normal-bg: var(--c-white);--color-input-normal-border: var(--c-grey);--color-input-normal-placeholder: var(--c-grey);--color-input-normal-focus-border: var(--c-blue-800);--color-input-error-text: var(--c-red);--color-input-error-bg: var(--c-red-100);--color-input-error-border: var(--c-red);--color-input-error-placeholder: var(--c-red);--color-input-error-focus-border: var(--c-red);--color-error-message-text: var(--c-red);--color-button-text: var(--c-white);--color-button-bg: var(--c-blue-800);--color-button-bg-active: var(--c-gradient);--color-signup-bg: var(--c-white)}:root{--font-size-h1: clamp(2.50rem, calc(1.546rem + 4.071vw), 3.50rem);--font-size-p: var(--fs-16);--font-size-li: var(--fs-16);--font-size-label: var(--fs-12);--font-size-input: var(--fs-16);--font-size-button: var(--fs-16);--font-size-error-message-text: var(--fs-12);--font-weight-h1: var(--fw-bold);--font-weight-p: var(--fw-regular);--font-weight-li: var(--fw-regular);--font-weight-label: var(--fw-bold);--font-weight-input-placeholder: var(--fw-regular);--font-weight-button-text: var(--fw-bold);--font-weight-error-message-text: var(--fw-bold)}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}body{font-family:var(--font),Arial,Helvetica,sans-serif;background-color:var(--color-main-bg);letter-spacing:0;line-height:1.5}h1{font-size:var(--font-size-h1);font-weight:var(--font-weight-h1);color:var(--color-h1);line-height:1}p{font-size:var(--font-size-p);font-weight:var(--font-weight-p);color:var(--color-p)}a{text-decoration:none}input,button,textarea,select{font:inherit;border:none;padding:0;background:none}input:focus,button:focus,textarea:focus,select:focus{outline:none}img,video,iframe,picture{display:block}button{cursor:pointer;font-size:var(--font-size-button);font-weight:var(--font-weight-button-text);color:var(--color-button-text);background-color:var(--color-button-bg);border-radius:.5rem}@media(min-width: 90rem){button:active{background:var(--color-button-bg-active);box-shadow:0 16px 32px 0 hsla(4,100%,67%,.5)}}/*# sourceMappingURL=style.css.map */
+:root {
+    --screen-size-mobile: 375;
+    --screen-size-tablet: 768;
+    --screen-size-desktop: 1440
+}
+
+:root {
+    --c-white: hsl(0, 0%, 100%);
+    --c-white-85: hsl(0, 0%, 85%);
+    --c-grey: hsl(0, 0%, 58%);
+    --c-blue-800: hsl(234, 29%, 20%);
+    --c-blue-700: hsl(235, 18%, 26%);
+    --c-red: hsl(4, 100%, 67%);
+    --c-red-100: hsl(2, 100%, 95%);
+    --c-gradient: linear-gradient(to right, hsl(15, 100%, 61%), hsl(346, 100%, 66%) 100%);
+    --color-main-bg: var(--c-blue-700);
+    --color-h1: var(--c-blue-800);
+    --color-p: var(--c-blue-800);
+    --color-li: var(--c-blue-800);
+    --color-label: var(--c-blue-800);
+    --color-input-normal-text: var(--c-blue-800);
+    --color-input-normal-bg: var(--c-white);
+    --color-input-normal-border: var(--c-grey);
+    --color-input-normal-placeholder: var(--c-grey);
+    --color-input-normal-focus-border: var(--c-blue-800);
+    --color-input-error-text: var(--c-red);
+    --color-input-error-bg: var(--c-red-100);
+    --color-input-error-border: var(--c-red);
+    --color-input-error-placeholder: var(--c-red);
+    --color-input-error-focus-border: var(--c-red);
+    --color-error-message-text: var(--c-red);
+    --color-button-text: var(--c-white);
+    --color-button-bg: var(--c-blue-800);
+    --color-button-bg-active: var(--c-gradient);
+    --color-button-modal-bg: var(--c-blue-800);
+    --color-button-modal-text: var(--c-white);
+    --color-signup-bg: var(--c-white)
+}
+
+:root {
+    --font-size-h1: clamp(2.50rem, calc(1.546rem + 4.071vw), 3.50rem);
+    --font-size-p: var(--fs-16);
+    --font-size-li: var(--fs-16);
+    --font-size-label: var(--fs-12);
+    --font-size-input: var(--fs-16);
+    --font-size-button: var(--fs-16);
+    --font-size-error-message-text: var(--fs-12);
+    --font-size-button-modal-text: var(--fs-16);
+    --font-weight-h1: var(--fw-bold);
+    --font-weight-p: var(--fw-regular);
+    --font-weight-li: var(--fw-regular);
+    --font-weight-label: var(--fw-bold);
+    --font-weight-input-placeholder: var(--fw-regular);
+    --font-weight-button-text: var(--fw-bold);
+    --font-weight-error-message-text: var(--fw-bold);
+    --font-weight-button-modal-text: var(--fw-bold)
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: var(--font), Arial, Helvetica, sans-serif;
+    background-color: var(--color-main-bg);
+    letter-spacing: 0;
+    line-height: 1.5
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-h1);
+    color: var(--color-h1);
+    line-height: 1
+}
+
+p {
+    font-size: var(--font-size-p);
+    font-weight: var(--font-weight-p);
+    color: var(--color-p)
+}
+
+a {
+    text-decoration: none
+}
+
+input, button, textarea, select {
+    font: inherit;
+    border: none;
+    padding: 0;
+    background: none
+}
+
+input:focus, button:focus, textarea:focus, select:focus {
+    outline: none
+}
+
+img, video, iframe, picture {
+    display: block
+}
+
+button {
+    cursor: pointer;
+    font-size: var(--font-size-button);
+    font-weight: var(--font-weight-button-text);
+    color: var(--color-button-text);
+    background-color: var(--color-button-bg);
+    border-radius: .5rem
+}
+
+@media (min-width: 90rem) {
+    button:active {
+        background: var(--color-button-bg-active);
+        box-shadow: 0 1rem 2rem 0 hsla(4, 100%, 67%, .5)
+    }
+}
+
+/*# sourceMappingURL=style.css.map */

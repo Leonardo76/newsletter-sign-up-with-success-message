@@ -65,7 +65,7 @@ button {
   @include breakpoint(desktop) {
     &:active {
       background: var(--color-button-bg-active);
-      box-shadow: 0 16px 32px 0 hsla(4, 100%, 67%, 0.5);
+      box-shadow: 0 calcRem(16) calcRem(32) 0 hsla(4, 100%, 67%, 0.5);
     }
   }
 }

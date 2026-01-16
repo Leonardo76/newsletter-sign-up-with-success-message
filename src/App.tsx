@@ -6,7 +6,6 @@ function App() {
         <div className="AppContainer">
             <SignUp></SignUp>
         </div>
-        // <DialogExample/>
     )
 }
 
