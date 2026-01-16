@@ -7,9 +7,13 @@ import path from "path"
 export default defineConfig({
     plugins: [react(), tailwindcss()],
 
+    //-----------------------------
+    //shadcn
+    //-----------------------------
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
         },
     },
+    //-----------------------------
 })
