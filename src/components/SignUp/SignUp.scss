@@ -10,7 +10,7 @@
   height: 100vh;
 
   @include breakpoint(tablet) {
-    position: absolute;
+    //position: absolute;
     top: calc(50% - 27.4375rem);//50% - 439px
     width: calcRem(608);
     height: calcRem(878);

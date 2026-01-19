@@ -8,7 +8,7 @@ import imageMobile from '../../assets/images/illustration-sign-up-mobile.svg'
 import imageTablet from '../../assets/images/illustration-sign-up-tablet.svg'
 import imageDesktop from '../../assets/images/illustration-sign-up-desktop.svg'
 
-import {DeviceType} from "../utils/Breakpoint/Breakpoint.tsx";
+import {useDeviceType} from "../utils/Breakpoint/useDeviceType.ts";
 
 //props for Input custom component - see the file for different types of inputs
 import {email_validation} from './inputValidations.ts'
@@ -18,6 +18,7 @@ import {Input} from "../Input/Input.tsx";
 
 //custom popup/modal/dialog shown on success
 import Modal from "../Modal/Modal.tsx";
+
 //endregion
 
 /**
@@ -52,7 +53,7 @@ function SignUp() {
     // setting the image depending on device (instead of <picture>)
     // <picture> loads the images when necessary.
     // Some big SVG loads slowly so you can see a delay in rendering on first load.
-    const deviceType = DeviceType();
+    const deviceType = useDeviceType();
     const image = deviceType == "isMobile"
         ? imageMobile
         : deviceType == "isTablet"
@@ -62,10 +63,11 @@ function SignUp() {
     // For time being, there is an error on shadcn UI
     // (translate all page on Y with -50vh when it shows the success message)
     // We need to translate it back
-    const translateOnSuccess = {transform: success ? "translateY( 50vh)" : ""};
+    //const translateOnSuccess = {transform: success ? "translateY( 50vh)" : ""};
 
     return (
-        <main className="signup" style={translateOnSuccess} aria-label={"Dialog for registering with an email"}>
+        // style={translateOnSuccess}
+        <main className="signup" aria-label={"Dialog for registering with an email"}  >
             {/*<picture>*/}
             {/*    <source media="(min-width:1440px)" srcSet={imageDesktop}/>*/}
             {/*    <source media="(min-width:768px)" srcSet={imageTablet}/>*/}
